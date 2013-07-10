@@ -1,0 +1,13 @@
+<div class="gallery-wrapper">
+  <h1>Gallery</h1>
+  <hr/>
+  <?php foreach($images as $image): ?>
+    <?php if ($image['path'] !== $lastpath): ?>
+      <h2 id="<?php echo $image['path'] ?>"><?php echo ucfirst($image['path']); $lastpath = $image['path']; ?></h2>
+    <?php endif; ?>
+    <a class="gallery-link" href="<?php echo $image['full'] ?>">
+      <?php echo $this->Html->image('grey.gif', array('class' => 'lazy', 'data-original' => $image['thumbnail'])) ?>
+      <noscript><?php echo $this->Html->image($image['thumbnail']) ?></noscript>
+    </a>
+  <?php endforeach; ?>
+</div>
