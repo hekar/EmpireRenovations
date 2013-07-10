@@ -1,29 +1,10 @@
-<div class="home-wrapper">
-    <h2>Interior & Exterior Services</h2>
-  <hr />
-  <ul class="home-services-col-l">
-    <li>Additions</li>
-    <li>Basements</li>
-    <li>Bathrooms</li>
-    <li>Kitchens</li>
-    <li>Back splash</li>
-    <li>Doors</li>
-    <li>Ceramic tile</li>
-    <li>Hardwood floors</li>
-  </ul>
-  
-  <ul class="home-services-col-r">
-    <li>Windows</li>
-    <li>Drywall</li>
-    <li>California-texture spraying</li>
-    <li>Painting</li>
-    <li>Electrical</li>
-    <li>Plumbing</li>
-    <li>Carpentry</li>
-  </ul>
-	<h2>Gallery</h2>
-  <hr />
-  <p>See our <?php echo $this->Html->link('gallery to know us better', array('controller' => 'app', 'action' => 'gallery')); ?></a></p>
-  
+<div data-ng-controller="MainController" class="home-wrapper">
+  <h2>Interior & Exterior Services</h2>
+  <table class="table e-service-table">
+      <tr data-ng-repeat="pair in interiorServices">
+          <td>{{pair[0]}}</td>
+          <td>{{pair[1]}}</td>
+      </tr>
+  </table>
 
 </div>

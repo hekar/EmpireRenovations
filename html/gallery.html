@@ -1,13 +1,14 @@
 <div class="gallery-wrapper">
   <h1>Gallery</h1>
-  <hr/>
-  <?php foreach($images as $image): ?>
-    <?php if ($image['path'] !== $lastpath): ?>
-      <h2 id="<?php echo $image['path'] ?>"><?php echo ucfirst($image['path']); $lastpath = $image['path']; ?></h2>
-    <?php endif; ?>
-    <a class="gallery-link" href="<?php echo $image['full'] ?>">
-      <?php echo $this->Html->image('grey.gif', array('class' => 'lazy', 'data-original' => $image['thumbnail'])) ?>
-      <noscript><?php echo $this->Html->image($image['thumbnail']) ?></noscript>
-    </a>
-  <?php endforeach; ?>
+  <div data-ng-repeat="image in images">
+      <h3>{{image.name}}</h3>
+      <ul class="thumbnails">
+          <li class="span4" data-ng-repeat="url in image.urls">
+              <a href="{{imageFullRoot + url}}" 
+                 class="thumbnail"><img 
+                      src="{{imageThumbRoot + url}}" alt="" 
+                       style="width:400px;height:300px;" /></a>
+          </li>
+      </ul>
+  </div>
 </div>
