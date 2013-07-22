@@ -1,14 +1,12 @@
-<div class="gallery-wrapper">
-  <h1>Gallery</h1>
-  <div data-ng-repeat="image in images">
-      <h3>{{image.name}}</h3>
-      <ul class="thumbnails">
-          <li class="span4" data-ng-repeat="url in image.urls">
-              <a href="{{imageFullRoot + url}}" 
-                 class="thumbnail"><img 
-                      src="{{imageThumbRoot + url}}" alt="" 
-                       style="width:400px;height:300px;" /></a>
-          </li>
-      </ul>
-  </div>
+<h1>Gallery</h1>
+<div data-ng-repeat="image in images">
+    <h3 id="{{image.name}}" class="toc-header">{{image.name}}</h3>
+    <ul class="thumbnails">
+        <li class="span4" data-ng-repeat="url in image.urls" data-post-repeat-directive="">
+            <a href="{{imageFullRoot + url}}" 
+               class="thumbnail gallery"><img 
+                    src="{{imageThumbRoot + url}}" alt="" 
+                    style="width:400px;height:300px;" /></a>
+        </li>
+    </ul>
 </div>

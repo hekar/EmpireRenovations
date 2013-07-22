@@ -1,10 +1,16 @@
-<div data-ng-controller="MainController" class="home-wrapper">
-  <h2>Interior & Exterior Services</h2>
-  <table class="table e-service-table">
-      <tr data-ng-repeat="pair in interiorServices">
-          <td>{{pair[0]}}</td>
-          <td>{{pair[1]}}</td>
-      </tr>
-  </table>
-
+<div data-ng-controller="MainController">
+    <div class="row-fluid">
+        <div class="span8">
+            
+        </div>
+        <div class="span4">
+            <h4>Interior & Exterior Services</h4>
+            <ul class="nav nav-tabs nav-stacked">
+                <li data-ng-repeat="pair in interiorServices"><a 
+                        class="non-link" onclick="return false" href="#">{{pair[0]}}</a></li>
+                <li data-ng-repeat="pair in interiorServices"><a 
+                        class="non-link" onclick="return false" href="#">{{pair[1]}}</a></li>
+            </ul>
+        </div>
+    </div>
 </div>

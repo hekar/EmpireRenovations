@@ -70,7 +70,7 @@ var GalleryConstant = {
                 'bathroom/6.jpg',
                 'bathroom/IMG_1359.JPG'
             ]
-        },{
+        }, {
             name: 'Door',
             urls: [
                 'door/IMG_1402.JPG',
@@ -78,7 +78,7 @@ var GalleryConstant = {
                 'door/IMG_1405.JPG',
                 'door/IMG_1404.JPG'
             ]
-        },{
+        }, {
             name: 'Plumbing',
             urls: [
                 'plumbing/IMG_0841.JPG',
@@ -91,7 +91,7 @@ var GalleryConstant = {
                 'plumbing/IMG_1292.JPG',
                 'plumbing/IMG_1287.JPG'
             ]
-        },{
+        }, {
             name: 'Fireplace',
             urls: [
                 'fireplace/IMG_1438.JPG',
@@ -103,7 +103,7 @@ var GalleryConstant = {
                 'fireplace/IMG_1432.JPG',
                 'fireplace/IMG_1438.JPG',
             ]
-        },{
+        }, {
             name: 'Tile',
             urls: [
                 'tile/IMG_1465.JPG',
@@ -114,7 +114,7 @@ var GalleryConstant = {
                 'tile/IMG_1468.JPG',
                 'tile/IMG_1450.JPG',
             ]
-        },{
+        }, {
             name: 'Kitchen',
             urls: [
                 'kitchen/IMG_1366.JPG',
@@ -126,7 +126,7 @@ var GalleryConstant = {
                 'kitchen/4.jpg',
                 'kitchen/IMG_1368.JPG',
             ]
-        },{
+        }, {
             name: 'Hardwood',
             urls: [
                 'hardwood/IMG_1409.JPG',
@@ -136,12 +136,12 @@ var GalleryConstant = {
                 'hardwood/3.jpg',
                 'hardwood/2.jpg'
             ]
-        },{
+        }, {
             name: 'Basement',
             urls: [
                 'basement/IMG_1401.JPG'
             ]
-        },{
+        }, {
             name: 'Lament',
             urls: [
                 'lament/IMG_1047.JPG',
@@ -155,12 +155,12 @@ var GalleryConstant = {
                 'lament/IMG_1048.JPG',
                 'lament/IMG_1049.JPG'
             ]
-        },{
+        }, {
             name: 'Carpet',
             urls: [
                 'carpet/IMG_1128.JPG'
             ]
-        },{
+        }, {
             name: 'Window',
             urls: [
                 'window/IMG_1338.JPG'
@@ -185,6 +185,9 @@ function GalleryController($scope, $tabs, $galleryConstant) {
     $scope.images = $galleryConstant.images;
     $scope.imageFullRoot = $galleryConstant.fullRoot;
     $scope.imageThumbRoot = $galleryConstant.thumbRoot;
+    $.each($scope.images, function(index, value){
+        value
+    });
 }
 
 function AboutController($scope, $tabs) {
@@ -202,6 +205,21 @@ angular.element(document).ready(function() {
             .value('$tabs', new EmpireTabs())
             .value('$interiorServices', ServicesConstant)
             .value('$galleryConstant', GalleryConstant)
+            .directive('postRepeatDirective', function() {
+                return function(scope, element, attrs) {
+                  if (scope.$last){
+                      $('a.gallery').colorbox({
+                          rel: 'gal',
+                          width: '90%',
+                          height: '90%',
+                          innerWidth: '100%',
+                          innerHeight: '100%',
+                          transition: 'fade',
+                          speed: 250
+                      });
+                  }
+                }
+            })
             .config(['$routeProvider', function($routeProvider) {
             return $routeProvider.when('/', {
                 templateUrl: 'html/main.html',
