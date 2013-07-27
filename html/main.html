@@ -5,23 +5,20 @@
             <p>With over 10 years of experience in the Kitchener-Waterloo area. Our dedicated team of builders will ensure that your construction project will be what you desire, because we will offer you with the best quality at the lowest price guaranteed. Best of all we are fully insured.</p>
 
             <h3>Our Experience</h3>
-            <p>We Have a Team of 20+ Years of Professional Experience We make it easy for you to build or renovate your new or existing home or business.</p>
+            <p>We Have a Team of 20+ Years of Professional Experience we make it easy for you to build or renovate your new or existing home or business.</p>
 
             <h3>Mission Statement</h3>
             <p>Our goal is to make sure you are getting the highest quality of service from our company. We are very flexible and our cost is affordable when it comes to home or business renovations. We put our experienced professionals at work and make your dreams come true.</p>
 
             <h3>Gallery</h3>
-            <div data-ng-repeat="image in images">
-                <h3 id="{{image.name}}" class="toc-header">{{image.name}}</h3>
-                <ul class="thumbnails">
-                    <li>
-                        <a href="/EmpireRenovations/#/gallery" 
-                           class="thumbnail"><img 
-                                src="{{imageThumbRoot + image.urls[0]}}" alt="" 
-                                style="width:400px;height:300px;" /></a>
-                    </li>
-                </ul>
-            </div>
+            <ul class="thumbnails">
+                <li class="span4" data-ng-repeat="image in images">
+                    <h3 id="{{image.name}}">{{image.name}}</h3>
+                    <a href="/EmpireRenovations/#/gallery" class="thumbnail"><img 
+                            src="{{imageThumbRoot + image.urls[0]}}" alt="" 
+                            style="width:400px;height:300px;" /></a>
+                </li>
+            </ul>
         </div>
         <div class="span4">
             <h4>Interior & Exterior Services</h4>

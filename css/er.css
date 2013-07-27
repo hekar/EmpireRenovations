@@ -3,8 +3,15 @@ body {
     margin-bottom: 70px;
 }
 
+@media (min-width: 500px) {
+    .row-fluid [class*="span"]  {
+        margin-left: 0;
+        margin-right: 1.0%;
+    }
+}
+
 #header {
-    color: white;
+    color: whitesmoke;
     background-color: #0D5373;
 }
 
@@ -25,7 +32,7 @@ body {
     font-size: 1.15em;
 }
 
-a {
+#nav > a {
     color: #1BAEF0;
 }
 
@@ -34,7 +41,7 @@ a {
     padding-left: 15px;
     padding-right: 15px;
     background-color: #0D5373;
-    padding-bottom: 15px;
+    padding-bottom: 20px;
 }
 
 .wrapper {
@@ -42,8 +49,7 @@ a {
 }
 
 #nav .nav {
-    border-bottom: 1px solid #0E0847;
-    margin-bottom: 0px;
+    margin-bottom: 5px;
 }
 
 table.e-service-table {
@@ -59,7 +65,7 @@ table.e-service-table tbody td {
 }
 
 .e-fixed-footer {
-    color: white;
+    color: whitesmoke;
     background-color: #0D5373;
     height: 70px;
     position: fixed;
@@ -88,6 +94,13 @@ span.e-fixed-footer-call img {
     width: 20px;
     height: 20px;
     display: inline;
+}
+
+div.e-fixed-footer-title span {
+    text-transform: uppercase;
+    font-family: 'Ledger', serif;
+    font-weight: bold;
+    font-size: 0.95em;
 }
 
 a.non-link {

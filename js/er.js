@@ -1,19 +1,19 @@
 function EmpireTabs() {
     this.tabs = [
         {
-            name: 'Home', url: '#/'
+            name: 'Home', url: '/EmpireRenovations/#/'
         },
         {
-            name: 'FAQ', url: '#/faq'
+            name: 'FAQ', url: '/EmpireRenovations/#/faq'
         },
         {
-            name: 'Gallery', url: '#/gallery'
+            name: 'Gallery', url: '/EmpireRenovations/#/gallery'
         },
         {
-            name: 'About', url: '#/about'
+            name: 'About', url: '/EmpireRenovations/#/about'
         },
         {
-            name: 'Contact', url: '#/contact'
+            name: 'Contact', url: '/EmpireRenovations/#/contact'
         }
     ];
     this.setActive = (function(name) {
