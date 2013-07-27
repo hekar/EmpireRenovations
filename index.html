@@ -2,6 +2,7 @@
     <head>
         <title>Empire Renovations - Customer Satisfaction is our Priority</title>
 
+        <link href='http://fonts.googleapis.com/css?family=Ledger' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" type="text/css" href="/EmpireRenovations/css/bootstrap-responsive.min.css" />
         <link rel="stylesheet" type="text/css" href="/EmpireRenovations/css/bootstrap.min.css" />
         <link rel="stylesheet" type="text/css" href="/EmpireRenovations/css/colorbox.css" />
@@ -18,43 +19,40 @@
     </head>
 
     <body>
-        <div id="header">
-            <div data-ng-controller="MainController">
-                <ul class="nav nav-pills">
-                    <li class="{{tab.active}}" data-ng-repeat="tab in tabs">
-                        <a href="{{tab.url}}">{{tab.name}}</a>
-                    </li>
-                </ul>
-            </div>
+        <div id="nav" data-ng-controller="MainController">
+            <ul class="nav nav-pills">
+                <li class="{{tab.active}}" data-ng-repeat="tab in tabs">
+                    <a href="{{tab.url}}">{{tab.name}}</a>
+                </li>
+            </ul>
+            <div class="row" id="header">
+                <div class="span8">
+                    <h1 class="header-title">
+                        <span>Empire Renovations</span>
+                    </h1>
 
-            <div class="wrapper">
-                <div class="row">
-                    <div class="span6">
-                        <h1 class="header-title">
-                            <span>Empire Renovations</span>
-                        </h1>
-
-                        <span>General Contracting</span><br/>
-                        <span>Interior &amp; Exterior</span><br/>
-                    </div>
-                    <div class="span6">
-                        <br />
-                        <abbr title="Mobile">C: </abbr><a href="tel:519-616-1052">(519) 616 1052</a><br/>
-                        <abbr title="Business">T: </abbr><a href="tel:519-208-3020">(519) 208 3020</a>
-                        <div><abbr title="Email">Email: </abbr><a href="mailto:empire.reno@hotmail.com" class="header-email">empire.reno@hotmail.com</a></div>
-                        <div>Free Estimates</div>
-                    </div>
+                    <span class="larger">General Contracting</span><br/>
+                    <span class="larger">Interior &amp; Exterior</span><br/>
                 </div>
-                <hr/>
-                <br/>
-
-                <div data-ng-view=""></div>
+                <div  class="larger2" class="span6">
+                    <br />
+                    <abbr title="Mobile">C: </abbr><a href="tel:519-616-1052">(519) 616 1052</a><br/>
+                    <abbr title="Business">T: </abbr><a href="tel:519-208-3020">(519) 208 3020</a>
+                    <div><abbr title="Email">Email: </abbr><a href="mailto:empire.reno@hotmail.com" class="header-email">empire.reno@hotmail.com</a></div>
+                    <div>Free Estimates with No Obligations!</div>
+                </div>
             </div>
 
-            <div class="e-fixed-footer">
-                <span class="e-fixed-footer-call"><img src="/EmpireRenovations/img/call.png" /><a href="tel:519-616-1052">(519) 616 1052</a></span>
-                <div class="e-fixed-footer-title">Empire Renovations - Kitchener ON Canada</div>
-            </div>
+        </div>
+
+        <div class="wrapper">
+            <div data-ng-view=""></div>
+        </div>
+
+        <div class="e-fixed-footer">
+            <span class="e-fixed-footer-call"><img src="/EmpireRenovations/img/call.png" /><a href="tel:519-616-1052">(519) 616 1052</a></span>
+            <div class="e-fixed-footer-title">Empire Renovations - Kitchener ON Canada</div>
+        </div>
 
     </body>
 

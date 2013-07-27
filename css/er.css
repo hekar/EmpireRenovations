@@ -1,6 +1,49 @@
 body {
-    padding: 15px;
+
     margin-bottom: 70px;
+}
+
+#header {
+    color: white;
+    background-color: #0D5373;
+}
+
+.header-title {
+    text-transform: uppercase;
+    font-family: 'Ledger', serif;
+}
+
+#header a {
+    color: #1BAEF0;
+}
+
+#header .larger {
+    font-size: 1.15em;
+}
+
+#header .larger2 {
+    font-size: 1.15em;
+}
+
+a {
+    color: #1BAEF0;
+}
+
+#nav {
+    padding: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: #0D5373;
+    padding-bottom: 15px;
+}
+
+.wrapper {
+    padding: 15px;
+}
+
+#nav .nav {
+    border-bottom: 1px solid #0E0847;
+    margin-bottom: 0px;
 }
 
 table.e-service-table {
@@ -16,7 +59,8 @@ table.e-service-table tbody td {
 }
 
 .e-fixed-footer {
-    background-color: white;
+    color: white;
+    background-color: #0D5373;
     height: 70px;
     position: fixed;
     bottom: 0px;
@@ -34,11 +78,15 @@ span.e-fixed-footer-call {
     line-height: 35px;
 }
 
+span.e-fixed-footer-call a {
+    color: #1BAEF0;
+}
+
 span.e-fixed-footer-call img {
     margin-top: -2px;
     padding-right: 4px;
-    width: 18px;
-    height: 18px;
+    width: 20px;
+    height: 20px;
     display: inline;
 }
 

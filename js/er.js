@@ -168,10 +168,13 @@ var GalleryConstant = {
         }
     ]
 };
-function MainController($scope, $tabs, $interiorServices) {
+function MainController($scope, $tabs, $interiorServices, $galleryConstant) {
     $scope.tabs = $tabs.tabs;
     $tabs.setActive('Home');
+    $scope.imageFullRoot = $galleryConstant.fullRoot;
+    $scope.imageThumbRoot = $galleryConstant.thumbRoot;
     $scope.interiorServices = $interiorServices.interior;
+    $scope.images = $galleryConstant.images;
 }
 
 function FaqController($scope, $tabs) {
