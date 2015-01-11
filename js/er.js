@@ -1,19 +1,19 @@
 function EmpireTabs() {
     this.tabs = [
         {
-            name: 'Home', url: '/EmpireRenovations/#/'
+            name: 'Home', url: '/#/'
         },
         {
-            name: 'FAQ', url: '/EmpireRenovations/#/faq'
+            name: 'FAQ', url: '/#/faq'
         },
         {
-            name: 'Gallery', url: '/EmpireRenovations/#/gallery'
+            name: 'Gallery', url: '/#/gallery'
         },
         {
-            name: 'About', url: '/EmpireRenovations/#/about'
+            name: 'About', url: '/#/about'
         },
         {
-            name: 'Contact', url: '/EmpireRenovations/#/contact'
+            name: 'Contact', url: '/#/contact'
         }
     ];
     this.setActive = (function(name) {
@@ -40,8 +40,8 @@ var ServicesConstant = {
     ]
 };
 var GalleryConstant = {
-    fullRoot: 'http://empirerenovations.ca/app/webroot/img/full/',
-    thumbRoot: 'http://empirerenovations.ca/app/webroot/img/thumbnail/',
+    fullRoot: '/img/full/',
+    thumbRoot: '/img/thumbnail/',
     images: [
         {
             name: 'Bathroom',
